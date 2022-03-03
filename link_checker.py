@@ -37,10 +37,13 @@ def CHECK_IP(url):
 
 
 for ip in url_list:
+
+    # check if proxy:port and print proxy only
     if ":" in ip:
         ip = ip[:ip.index(":")]
     
     check = CHECK_IP(ip)
+    
     if check:
         print(f"{ip.strip()} [True]")
     else:
